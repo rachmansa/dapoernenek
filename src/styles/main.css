@@ -1,0 +1,500 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    color: #424242;
+}
+
+/*
+ * Header
+ *
+ */
+
+.header {
+    min-height: 56px;
+    transition: min-height 0.3s;
+}
+
+.header__inner {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__title {
+    font-weight: 300;
+    font-size: 4em;
+    margin: 0.5em 0.25em;
+    display: inline-block;
+    color: #212121;
+}
+
+.header__menu {
+    margin: 10px auto;
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
+    text-align: center;
+
+}
+
+.header__menu button {
+    background-color: transparent;
+    border: none;
+    font-size: 32px;
+    display: inline;
+    text-decoration: none;
+    min-width: 44px;
+    min-height: 44px;
+    cursor: pointer;
+}
+
+
+/*
+ * Top level navigation
+ */
+
+.nav {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.nav__list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__item {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 1.3em;
+    text-decoration: none;
+    color: #616161;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+
+/*
+ * Jumbotron
+ */
+.color-overlay{
+    display: flex;
+    align-items: center;
+    min-height: 380px;
+    width: 100%;
+    text-align: center;
+    background: rgba(41, 41, 41, 0.82);
+    z-index: 2;
+    background-position: center;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 380px;
+    width: 100%;
+    text-align: center;
+    background-image: url("/images/hero-image_2-large.jpg");
+    background-position: center;
+    background-color: green;
+}
+
+.hero__inner {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.hero__title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 36px;
+}
+
+.hero__tagline {
+    color: #fff;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+/*
+ * main
+ */
+
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*
+ * content
+ */
+
+.content {
+    padding: 32px;
+}
+
+/* 
+ * skip to content
+ */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #bf1722;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/*
+ * headline
+ */
+
+.headline__figure {
+    width: 100%;
+}
+
+.headline__figure img {
+    width: 100%;
+}
+
+.headline__figure figcaption {
+    text-align: center;
+    color: #666666;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.headline__content {
+    width: 100%;
+    padding: 16px 0;
+}
+
+.headline__title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.headline__description {
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.headline__button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    margin-top: 24px;
+    cursor: pointer;
+    padding: 8px 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #2c3e50;
+    transition: opacity 0.3s;
+}
+
+.headline__button:hover {
+    opacity: 0.8;
+}
+
+/*
+ * latest
+ */
+
+.latest {
+    width: 100%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.latest__label {
+    font-size: 32px;
+    font-weight: lighter;
+}
+
+.latest__label::after {
+    content: '';
+    margin-top: 16px;
+    display: block;
+    border-bottom: 1px solid #eeeeee;
+}
+
+/*
+ * restaurant-list
+ */
+
+#restaurantItemContainer {
+    margin: 32px auto auto;
+    text-align: left;
+    /* display: grid;
+    grid-row-gap: 16px; */
+}
+
+/*
+ * template
+ */
+
+.item-template {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*
+ * posts
+ */
+
+.posts {
+    margin: 32px auto auto;
+    text-align: left;
+}
+
+/*
+ * post item
+ */
+
+.post-item {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 1em;
+
+}
+
+.post-item__content {
+    padding: 16px;
+}
+
+.post-item__thumbnail {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.post-item__date {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.post-item__rating {
+    font-size: 12px;
+    color: #ffa600;
+}
+
+#city {
+    position: absolute;
+    background-color: #212121;
+    margin-top: -230px;
+    opacity: 0.5;
+    width: 100px;
+    height: 25px;
+    padding: 0.5em;
+
+}
+
+.post-item__city {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.post-item__date__author {
+    color: red;
+    text-decoration: none;
+}
+
+.post-item__title {
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 16px;
+    transition: 0.3s opacity;
+}
+
+.post-item__title:hover {
+    opacity: 0.5;
+}
+
+.post-item__title a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    min-width: 44px;
+    min-height: 44px;
+    margin-bottom: -10px;
+
+}
+
+.post-item__title h1 {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.post-item__description {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 1.5em;
+    text-align: justify;
+    /* overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; */
+
+}
+
+.detail-link{
+    color: rgb(250, 80, 57);
+    text-align: right;
+}
+
+.detail-link:hover{
+    text-decoration: underline;
+}
+
+/*
+  Movie
+*/
+
+.movie {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px 16px;
+}
+
+.movie .movie__poster {
+    width: 100%;
+    /* max-width: 400px; */
+}
+
+.movie .movie__info h2 {
+    margin: 10px 0;
+}
+
+.movie__info p {
+    font-size: 12px;;
+}
+
+/* 
+  Description
+*/
+.restaurant-description{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    text-align: justify;
+    line-height: 1.5;
+    -webkit-line-clamp: 6; 
+    -webkit-box-orient: vertical;
+    margin-bottom: 1rem;
+    margin-top: 16px;
+}
+
+/* 
+    Review
+*/
+
+.review{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    line-height: 1.8;
+}
+
+.review-date{
+    color: gray;
+    text-align: right;
+}
+
+.review-name {
+    font-size: 14px;
+    font-weight: bold;
+    color :#2c3e50
+}
+
+/*
+    Like
+*/
+.like {
+    font-size: 18px;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: #db0000;
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+    color: #db0000;
+}
+
+/*
+ * footer
+ */
+
+footer {
+    background-color: #2c3e50;
+    padding: 2em;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+

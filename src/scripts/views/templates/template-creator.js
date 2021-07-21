@@ -20,7 +20,7 @@ const createRestaurantItemTemplate = (restaurant) => `
     <a class="item-template" href="${`/#/detail/${restaurant.id}`}"> 
     <article class="post-item">
          
-            <img class="lazyload post-item__thumbnail" src="${CONFIG.BASE_MED_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}"/>
+            <img class="lazyload post-item__thumbnail" data-src="${CONFIG.BASE_MED_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}"/>
         
         <div id="city">
             <p class="post-item__city">${restaurant.city}</p>
